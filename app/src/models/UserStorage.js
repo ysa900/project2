@@ -31,6 +31,15 @@ static #users = {
         },{});
         return userInfo;
     }
+    
+    static save(userInfo)   {
+
+        const users = this.#users;
+        users.id.push(userInfo.id);
+        users.names.push(userInfo.name);
+        users.psword.push(userInfo.psword);
+        return {success: true};
+    }    
 
 }
 
